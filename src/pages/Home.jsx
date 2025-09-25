@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
+import profilePhoto from "../assets/Images2.png";
 import {
   Mail,
   MessageCircle,
@@ -97,7 +98,10 @@ const Portfolio = () => {
   const techTags = ['React.js', 'C#', 'Java', 'C++', 'SQL', 'HTML', 'Python'];
 
   // Profile photo - ganti dengan path foto kamu
-  const profilePhoto = "src/assets/Images2.png"; // atau "src/assets/images/melvin-profile.jpg"
+
+
+<img src={profilePhoto} alt="Profile" />
+ // atau "src/assets/images/melvin-profile.jpg"
 
   return (
     <div className="portfolio-container">
