@@ -11,7 +11,11 @@ import {
   Smartphone,
   Globe,
   Zap,
-  User
+  User,
+  ZapOffIcon,
+  ZapIcon,
+  PlugZap2,
+  Globe2Icon
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -81,6 +85,24 @@ const Portfolio = () => {
       tech: ["SQL", "C#"],
       gradient: "gradient-orange-red",
       githubLink: "https://github.com/MelvinJonathan/analytics-dashboard"
+    },
+    {
+      id: 4,
+      title: "Data Analytics",
+      description: "Aplikasi manajemen tugas dengan drag & drop, real-time updates, dan team collaboration features.",
+      icon: <PlugZap2 className="project-icon" />,
+      tech: ["React.js", "HTML", "JavaScript"],
+      gradient: "gradient-green-teal",
+      githubLink: "https://github.com/MelvinJonathan/task-manager"
+    },
+    {
+      id: 5,
+      title: "Chat Bot Web",
+      description: "Aplikasi manajemen tugas dengan drag & drop, real-time updates, dan team collaboration features.",
+      icon: <Globe2Icon className="project-icon" />,
+      tech: ["React.js", "JavaScript", "Node.js"],
+      gradient: "gradient-blue-purple",
+      githubLink: "https://github.com/MelvinJonathan/task-manager"
     }
   ];
 
@@ -101,7 +123,7 @@ const Portfolio = () => {
       {/* Navigation */}
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="nav-container">
-          <div className="logo">Portfolio</div>
+          <div className="logo">Portofolio</div>
           <div className="nav-links">
             {['home', 'about', 'projects', 'contact'].map((section) => (
               <button
@@ -136,16 +158,15 @@ const Portfolio = () => {
             </div>
 
             <h1 className="home-title">
-              Halo, Saya Melvin Jonathan
+              Hi, I’m Melvin Jonathan
             </h1>
 
             <p className="home-subtitle">
-              Computer Science Student & Full Stack Developer
+              💻 Computer Science Student & Full Stack Developer
             </p>
 
             <p className="home-description">
-              Mahasiswa Computer Science yang passionate dalam membangun aplikasi web modern. 
-              Mengutamakan clean code, performance, dan user experience dalam setiap project.
+              Passionate about building modern web applications with clean code, performance, and great user experience.
             </p>
 
             <div className="home-buttons">
@@ -153,13 +174,13 @@ const Portfolio = () => {
                 onClick={() => scrollToSection('about')}
                 className="btn btn-primary"
               >
-                Pelajari Lebih Lanjut
+                View My Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="btn btn-secondary"
               >
-                Hubungi Saya
+                Let’s Collaborate
               </button>
             </div>
           </div>
@@ -170,23 +191,23 @@ const Portfolio = () => {
       <section id="about" className="section about-section">
         <div className="section-container">
           <div className="section-header">
-            <h2 className="section-title">Tentang Saya</h2>
+            <h2 className="section-title">About Me</h2>
             <div className="section-divider"></div>
           </div>
 
           <div className="about-grid">
             <div className="about-text">
               <p className="about-paragraph">
-                Mahasiswa S1 Computer Science di Binus University dengan kemampuan manajemen waktu yang baik,
-                memungkinkan saya untuk menyeimbangkan kegiatan akademis dan proyek pribadi secara efektif. Saya
-                memiliki kemampuan bersosialisasi yang kuat untuk berkolaborasi dalam tim dan mudah beradaptasi dengan
-                lingkungan kerja yang dinamis.
+                I am a Computer Science student at Binus University with strong time management and teamwork skills, 
+                allowing me to balance academic activities and personal projects effectively. Skilled in HTML, SQL, 
+                React.js, Java, and C++, I am eager to apply my knowledge in professional projects. My focus is on 
+                creating solutions that are not only functional, but also maintainable and high-performing. Open to 
+                collaboration, I am excited to bring ideas to life and contribute to impactful projects.
               </p>
 
               <p className="about-paragraph">
-                Saya bersemangat untuk mengaplikasikan pengetahuan dan keterampilan yang saya miliki dalam 
-                proyek-proyek profesional. Fokus saya adalah menciptakan solusi yang tidak hanya functional, 
-                tetapi juga maintainable dan performant.
+                I am eager to apply my knowledge and skills to professional projects. My focus is on creating 
+                solutions that are not only functional but also maintainable and high-performing.
               </p>
 
               <div className="tech-tags">
@@ -227,10 +248,10 @@ const Portfolio = () => {
       <section id="projects" className="section projects-section">
         <div className="section-container">
           <div className="section-header">
-            <h2 className="section-title">Proyek Terbaru</h2>
+            <h2 className="section-title">My Projects</h2>
             <div className="section-divider"></div>
             <p className="section-description">
-              Beberapa proyek yang telah saya kerjakan menggunakan berbagai teknologi programming.
+              Several projects I have worked on.
             </p>
           </div>
 
@@ -279,10 +300,10 @@ const Portfolio = () => {
         <div className="contact-overlay"></div>
         <div className="section-container">
           <div className="section-header">
-            <h2 className="section-title text-white">Mari Berkolaborasi</h2>
+            <h2 className="section-title text-white">Let's collaborate!</h2>
             <div className="section-divider bg-white"></div>
             <p className="section-description text-white">
-              Tertarik untuk bekerja sama? Saya siap membantu mewujudkan proyek Anda!
+              Interested in working together? I’m ready to help make your project a reality!
             </p>
           </div>
 
