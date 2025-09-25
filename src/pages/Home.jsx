@@ -136,7 +136,7 @@ const Portfolio = () => {
             </div>
 
             <h1 className="home-title">
-              Halo, Saya Melvin tai
+              Halo, Saya Melvin Jonathan
             </h1>
 
             <p className="home-subtitle">
