@@ -1,41 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-import profilePhoto from "../assets/Images2.png";
 import {
   Mail,
   MessageCircle,
   Linkedin,
   Github,
-  ExternalLink,
   Code,
   Palette,
   Database,
   Smartphone,
   Globe,
   Zap,
-  User,
-  Briefcase,
-  Phone
+  User
 } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // ✅ Foto profil dari public folder
+  const profilePhoto = "/Images2.png";
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
+
+      // Update active section berdasarkan posisi scroll
       const sections = ['home', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
-      
+
       sections.forEach(section => {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
           }
@@ -97,12 +96,6 @@ const Portfolio = () => {
 
   const techTags = ['React.js', 'C#', 'Java', 'C++', 'SQL', 'HTML', 'Python'];
 
-  // Profile photo - ganti dengan path foto kamu
-
-
-<img src={profilePhoto} alt="Profile" />
- // atau "src/assets/images/melvin-profile.jpg"
-
   return (
     <div className="portfolio-container">
       {/* Navigation */}
@@ -129,7 +122,7 @@ const Portfolio = () => {
         <div className="section-container">
           <div className="home-content">
             <div className="profile-avatar">
-              {/* Menggunakan foto profil jika tersedia, fallback ke icon User */}
+              {/* Foto profil */}
               <img 
                 src={profilePhoto} 
                 alt="Melvin Jonathan Profile"
