@@ -19,7 +19,7 @@ const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // ✅ Foto profil dari public folder
-  const profilePhoto = "/Images2.png";
+  const profilePhoto = "/images/Images2.png";
 
   useEffect(() => {
     const handleScroll = () => {
