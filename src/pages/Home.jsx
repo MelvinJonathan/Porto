@@ -22,14 +22,14 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // ✅ Foto profil dari public folder
+
   const profilePhoto = "/images/Images2.png";
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section berdasarkan posisi scroll
+
       const sections = ['home', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
@@ -61,62 +61,62 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution dengan React, Java, dan C++. Fitur lengkap termasuk payment gateway dan admin dashboard.",
+      title: "HCI Project Individu",
+      description: "Sebuah project yang di buat untuk menampilkan profil perusahaan, produk sereal, dan informasi seperti kontak, dll.",
       icon: <Globe className="project-icon" />,
-      tech: ["React.js", "Java", "C++"],
+      tech: ["HTML & CSS"],
       gradient: "gradient-blue-purple",
-      githubLink: "https://github.com/MelvinJonathan/ecommerce-platform"
+      githubLink: "https://github.com/MelvinJonathan/HCI_Project_Individu"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Aplikasi manajemen tugas dengan drag & drop, real-time updates, dan team collaboration features.",
-      icon: <Smartphone className="project-icon" />,
-      tech: ["React.js", "Python", "HTML"],
+      title: "Code Reengeneering Project",
+      description: "Project Refactoring sebuah smell code.",
+      icon: <ZapOffIcon className="project-icon" />,
+      tech: ["Java"],
       gradient: "gradient-green-teal",
-      githubLink: "https://github.com/MelvinJonathan/task-manager"
+      githubLink: "https://github.com/MelvinJonathan/Code_Reengeneering_Project"
     },
     {
       id: 3,
-      title: "Analytics Dashboard",
-      description: "Dashboard analytics real-time dengan visualisasi data interaktif dan reporting system yang komprehensif.",
+      title: "Data Structure Project",
+      description: "Program kamus slang berbasis struktur data Trie yang memungkinkan pengguna untuk menambahkan, mencari, dan menampilkan kata slang beserta deskripsinya.",
       icon: <Zap className="project-icon" />,
-      tech: ["SQL", "C#"],
+      tech: ["C++"],
       gradient: "gradient-orange-red",
-      githubLink: "https://github.com/MelvinJonathan/analytics-dashboard"
+      githubLink: "https://github.com/MelvinJonathan/Data_Structure_Project"
     },
     {
       id: 4,
-      title: "Data Analytics",
-      description: "Aplikasi manajemen tugas dengan drag & drop, real-time updates, dan team collaboration features.",
-      icon: <PlugZap2 className="project-icon" />,
-      tech: ["React.js", "HTML", "JavaScript"],
+      title: "Pattern Software Design Project",
+      description: "Sebuah web yang di rancang untuk card shop.",
+      icon: <Smartphone className="project-icon" />,
+      tech: ["JavaScript"],
       gradient: "gradient-green-teal",
-      githubLink: "https://github.com/MelvinJonathan/task-manager"
+      githubLink: "https://github.com/MelvinJonathan/Pattern_Software_Design_Project"
     },
     {
       id: 5,
-      title: "Chat Bot Web",
-      description: "Aplikasi manajemen tugas dengan drag & drop, real-time updates, dan team collaboration features.",
+      title: "Software Engineering Project",
+      description: "sebuah web chat bot yang dibuat sebagai tempat untuk belajar koding dan mencari jawaban dengan cepat, akurat.",
       icon: <Globe2Icon className="project-icon" />,
-      tech: ["React.js", "JavaScript", "Node.js"],
+      tech: ["TypeScript"],
       gradient: "gradient-blue-purple",
-      githubLink: "https://github.com/MelvinJonathan/task-manager"
+      githubLink: "https://github.com/MelvinJonathan/AOL_Software_Engineering_Kelompok_2"
     }
   ];
 
   const skills = [
     { name: "React.js", icon: <Code className="skill-icon" />, level: 90 },
     { name: "C++", icon: <Code className="skill-icon" />, level: 80 },
-    { name: "Java", icon: <Code className="skill-icon" />, level: 90 },
-    { name: "UI/UX Design", icon: <Palette className="skill-icon" />, level: 80 },
-    { name: "SQL", icon: <Database className="skill-icon" />, level: 85 },
+    { name: "Java", icon: <Code className="skill-icon" />, level: 80 },
+    { name: "HTML & CSS", icon: <Palette className="skill-icon" />, level: 85 },
+    { name: "SQL", icon: <Database className="skill-icon" />, level: 90 },
     { name: "C#", icon: <Code className="skill-icon" />, level: 75 },
     { name: "Python", icon: <Code className="skill-icon" />, level: 85 }
   ];
 
-  const techTags = ['React.js', 'C#', 'Java', 'C++', 'SQL', 'HTML', 'Python'];
+  const techTags = ['React.js', 'C#', 'Java', 'C++', 'SQL', 'HTML & CSS', 'Python'];
 
   return (
     <div className="portfolio-container">
@@ -174,7 +174,7 @@ const Portfolio = () => {
                 onClick={() => scrollToSection('about')}
                 className="btn btn-primary"
               >
-                View My Projects
+                Learn More
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
@@ -330,6 +330,7 @@ const Portfolio = () => {
               </div>
               <h3 className="contact-title">LinkedIn</h3>
               <p className="contact-info">linkedin.com/in/melvin-jonathan</p>
+              
             </div>
           </div>
 
